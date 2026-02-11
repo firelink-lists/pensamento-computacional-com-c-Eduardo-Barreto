@@ -16,12 +16,12 @@ using namespace std;
 
 int main() {
     int a, b;
-    
+
     // Leia dois inteiros
     cin >> a >> b;
-    
+
     // Calcule e imprima a soma
     cout << a + b << endl;
-    
+
     return 0;
 }

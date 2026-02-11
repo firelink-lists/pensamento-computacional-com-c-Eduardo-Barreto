@@ -14,19 +14,40 @@
 
 using namespace std;
 
-// TODO: Crie a função para preencher o array
+bool fillArray(int* array, int& tamanho) {
+    cout << "Digite o tamanho do array (máximo 100): ";
+    cin >> tamanho;
+
+    if (tamanho < 1 || tamanho > 100) {
+        cout << "Tamanho inválido. Deve ser entre 1 e 100." << endl;
+        return false;
+    }
+
+    for (int i = 0; i < tamanho; i++) {
+        array[i] = i * 10;
+    }
+
+    return true;
+}
+
 
 int main() {
     const int CAPACIDADE = 100;
     int* array = new int[CAPACIDADE];
     int tamanho = 0;
-    
-    // TODO: Chame a função para preencher o array
-    
-    // TODO: Exiba o array
-    
-    // Libera memória
+
+    bool success = fillArray(array, tamanho);
+
+    if (!success) {
+        delete[] array;
+        return 1;
+    }
+
+    for (int i = 0; i < tamanho; i++) {
+        cout << array[i] << " ";
+    }
+    cout << endl;
+
     delete[] array;
-    
     return 0;
 }
