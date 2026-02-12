@@ -18,7 +18,6 @@ using namespace std;
 int main() {
     string nome;
 
-    std::cout << "Digite seu nome: ";
     std::getline(std::cin, nome);
 
     std::cout << "Olá, " << nome << "!" << std::endl;

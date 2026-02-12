@@ -15,7 +15,6 @@
 using namespace std;
 
 bool fillArray(int* array, int& tamanho) {
-    cout << "Digite o tamanho do array (máximo 100): ";
     cin >> tamanho;
 
     if (tamanho < 1 || tamanho > 100) {
